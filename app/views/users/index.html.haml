@@ -1,5 +1,5 @@
-%h1 Welcome to the Mission Board
-%h3 Please select your user or create a new one to view the MissionBoard
+.container.main
+
 .container.marketing
   - if @users.present?
     .rows.users-list
@@ -16,8 +16,8 @@
   %h4 Neuer User?
   = form_for @user do |f|
     = f.label :name
-    = f.text_field :name
-    %p
+    = f.text_field :name, style: 'width: 265px'
+    %br
       %label Photo
-      = f.file_field :photo
+      = f.file_field :photo, class: 'file-input'
     = f.submit
