@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @todo.title
+%p
+  %strong Description:
+  = @todo.description
+%p
+  %strong Status:
+  = @todo.status
+%p
+  %strong Due date:
+  = @todo.due_date
+= link_to 'Edit', edit_todo_path(@todo)
+
+= link_to 'Back', todos_path
